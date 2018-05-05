@@ -26,7 +26,7 @@ class Contact extends CI_Controller {
         $this->load->view('home/index',$data);
         $this->load->view('layouts/footer');
         $this->load->view('layouts/inc_footer');
-
+        //test
     }
 
 }
