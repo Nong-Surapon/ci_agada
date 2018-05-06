@@ -88,12 +88,13 @@ function validateFirstStep() {
 
     $(".wizard-card form").validate({
         rules: {
-            firstname: "required",
-            lastname: "required",
-            email: {
+            property_name: "required",
+            property_price: "required",
+            phone: "required"
+            /*,email : {
                 required: true,
                 email: true
-            }
+            }*/
 
             /*  other possible input validations
              ,username: {
@@ -119,9 +120,9 @@ function validateFirstStep() {
 
         },
         messages: {
-            firstname: "Please enter your First Name",
-            lastname: "Please enter your Last Name",
-            email: "Please enter a valid email address",
+            property_name: "กรุณากรอกข้อมูล หัวข้ออสังหาริมทรัพย์ บ้านที่ต้องการขาย",
+            property_price: "กรุณากรอกข้อมูล ราคาที่เหมาะสม",
+            phone: "กรุณากรอกข้อมูล เบอร์โทรศัพท์ติดต่อ",
             /*   other posible validation messages
              username: {
              required: "Please enter a username",

@@ -17,5 +17,5 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script>
 

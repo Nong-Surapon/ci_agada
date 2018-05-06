@@ -52,7 +52,12 @@
         <div class="collapse navbar-collapse yamm" id="navigation">
             <div class="button navbar-right">
                 <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('<?php echo base_url('ฝากขาย-บ้าน-คอนโด-ฟรี')?>')" data-wow-delay="0.45s">ฝากขายฟรี</button>
-                <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('<?php echo base_url('สมัครสมาชิก')?>')" data-wow-delay="0.48s">เข้าสู่ระบบ</button>
+                <?php if($this->session->userdata('username') ==""){ ?>
+                    <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('<?php echo base_url('สมัครสมาชิก')?>')" data-wow-delay="0.48s">เข้าสู่ระบบ<?php echo $this->session->userdata('username') ?></button>
+                <?php }else{ ?>
+                    <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('<?php echo base_url('register/logout')?>')" data-wow-delay="0.48s">ออกจากระบบ</button>
+                <?php } ?>
+
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li class="dropdown ymm-sw " data-wow-delay="0.1s"><a href="<?php echo base_url('ซื้อ-ขาย-บ้าน'); ?>" class="dropdown-toggle active" >บ้าน </b></a></li>

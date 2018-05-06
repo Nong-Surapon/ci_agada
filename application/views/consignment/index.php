@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="page-head-content">
-                <h1 class="page-title">Submit new property</h1>
+                <h1 class="page-title">รายละเอียด อสังหาริมทรัพย์</h1>
             </div>
         </div>
     </div>
@@ -21,23 +21,23 @@
                     <form action="" method="">
                         <div class="wizard-header">
                             <h3>
-                                <b>Submit</b> YOUR PROPERTY <br>
-                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing.</small>
+                                <b>กรุณา</b> กรอกรายละเอียดให้ครบท้วน <br>
+                                <small>หากรายละเอียดครบถ้วนจะสามารถทำให้ผู้เข้าชมเว็บไซต์เข้าใจข้อมูลมากขึ้น</small>
                             </h3>
                         </div>
 
                         <ul>
-                            <li><a href="#step1" data-toggle="tab">Step 1 </a></li>
-                            <li><a href="#step2" data-toggle="tab">Step 2 </a></li>
-                            <li><a href="#step3" data-toggle="tab">Step 3 </a></li>
-                            <li><a href="#step4" data-toggle="tab">Finished </a></li>
+                            <li><a href="#step1" data-toggle="tab">ขั้นตอนที่ 1 </a></li>
+                            <li><a href="#step2" data-toggle="tab">ขั้นตอนที่ 2 </a></li>
+                            <li><a href="#step3" data-toggle="tab">ขั้นตอนที่ 3 </a></li>
+                            <li><a href="#step4" data-toggle="tab">ขั้นตอนที่ 4 </a></li>
                         </ul>
 
                         <div class="tab-content">
 
                             <div class="tab-pane" id="step1">
                                 <div class="row p-b-15  ">
-                                    <h4 class="info-text"> Let's start with the basic information (with validation)</h4>
+                                    <h4 class="info-text">เริ่มต้นด้วยข้อมูลพื้นฐาน (พร้อมการตรวจสอบ)</h4>
                                     <div class="col-sm-4 col-sm-offset-1">
                                         <div class="picture-container">
                                             <div class="picture">
@@ -48,17 +48,17 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label>Property name <small>(required)</small></label>
-                                            <input name="propertyname" type="text" class="form-control" placeholder="Super villa ...">
+                                            <label for="property_name">หัวข้ออสังหาริมทรัพย์ บ้านที่ต้องการขาย <small class="text-danger">*</small></label>
+                                            <input name="property_name" id="property_name" type="text" class="form-control chk_empty" placeholder="บ้านเดี่ยว บ้านพร้อมอยู่">
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Property price <small>(required)</small></label>
-                                            <input name="propertyprice" type="text" class="form-control" placeholder="3330000">
+                                            <label for="property_price">ราคาที่เหมาะสม <small class="text-danger">*</small></label>
+                                            <input name="property_price" id="property_price" type="text" class="form-control chk_empty" placeholder="3000000" onkeyup="chkNumber(this)">
                                         </div>
                                         <div class="form-group">
-                                            <label>Telephone <small>(empty if you wanna use default phone number)</small></label>
-                                            <input name="phone" type="text" class="form-control" placeholder="+1 473 843 7436">
+                                            <label for="phone">เบอร์โทรศัพท์ติดต่อ <small class="text-danger">*</small></label>
+                                            <input name="phone" id="phone" type="text" class="form-control chk_empty" placeholder="0987654321" onkeyup="chkNumber(this)">
                                         </div>
                                     </div>
                                 </div>
@@ -68,19 +68,11 @@
                             <div class="tab-pane" id="step2">
                                 <h4 class="info-text"> How much your Property is Beautiful ? </h4>
                                 <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label>Property Description :</label>
-                                                <textarea name="discrition" class="form-control" ></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="col-sm-12">
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label>Property State :</label>
+                                                <label>จังหวัด :</label>
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
                                                     <option>Seoul</option>
                                                     <option>Paris</option>
@@ -93,7 +85,7 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label>Property City :</label>
+                                                <label>เขต/อำเภอ :</label>
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
                                                     <option>New york, CA</option>
                                                     <option>Paris</option>
@@ -106,7 +98,7 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label>Property Statue  :</label>
+                                                <label>แขวง/ตำบล :</label>
                                                 <select id="basic" class="selectpicker show-tick form-control">
                                                     <option> -Status- </option>
                                                     <option>Rent </option>
@@ -118,127 +110,91 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label>Property Statue  :</label>
+                                                <label>ประเภท :</label>
                                                 <select id="basic" class="selectpicker show-tick form-control">
-                                                    <option> -Status- </option>
-                                                    <option>Rent </option>
-                                                    <option>Boy</option>
-                                                    <option>used</option>
-
+                                                    <option> -กรุณาเลือก- </option>
+                                                    <option>บ้าน </option>
+                                                    <option>คอนโด</option>
+                                                    <option>อสังหาริมทรัพย์</option>
+                                                    <option>อื่นๆ</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 padding-top-15">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="property-geo">Min bed :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0"
-                                                       data-slider-max="600" data-slider-step="5"
-                                                       data-slider-value="[250,450]" id="min-bed" ><br />
-                                                <b class="pull-left color">1</b>
-                                                <b class="pull-right color">120</b>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
 
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label for="price-range">Min baths :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0"
-                                                       data-slider-max="600" data-slider-step="5"
-                                                       data-slider-value="[250,450]" id="min-baths" ><br />
-                                                <b class="pull-left color">1</b>
-                                                <b class="pull-right color">120</b>
+                                                <label>ความต้องการ  :</label>
+                                                <select id="basic" class="selectpicker show-tick form-control">
+                                                    <option> -กรุณาเลือก- </option>
+                                                    <option>ขาย </option>
+                                                    <option>ใช้เช่า</option>
+                                                    <option>ต้องการซื้อ</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>ห้องนอน :</label>
+                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>ห้องน้ำ :</label>
+                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>ขนาด (ตารางเมตร/ตารางวา) :</label>
+                                                <select id="basic" class="selectpicker show-tick form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="property-geo">Property geo (m2) :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0"
-                                                       data-slider-max="600" data-slider-step="5"
-                                                       data-slider-value="[50,450]" id="property-geo" ><br />
-                                                <b class="pull-left color">40m</b>
-                                                <b class="pull-right color">12000m</b>
+                                                <label>ข้อมูลเกี่ยวกับอสังหาริมทรัพย์ บ้าน :</label>
+                                                <textarea name="discrition" class="form-control" ></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 padding-top-15">
-                                        <div class="col-sm-3">
+
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Swimming Pool
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> 2 Stories
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Emergency Exit
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Fire Place
-                                                    </label>
-                                                </div>
+                                                <label>สิ่งอำนวยความสะดวก :</label>
+                                                <textarea name="facilities" class="form-control" ></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 padding-bottom-15">
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Laundry Room
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Jog Path
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Ceilings
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Dual Sinks
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
                                     <br>
                                 </div>
                             </div>
@@ -303,7 +259,7 @@
 
                         <div class="wizard-footer">
                             <div class="pull-right">
-                                <input type='button' class='btn btn-next btn-primary' name='next' value='Next' />
+                                <input type='button' class='btn btn-next btn-primary' id="next" name='next' value='Next' />
                                 <input type='button' class='btn btn-finish btn-primary ' name='finish' value='Finish' />
                             </div>
 

@@ -82,7 +82,7 @@ class Register extends CI_Controller {
 
                 $this->session->set_userdata(['username' => $result->username ]);
 
-                redirect(base_url().'register/enter');
+                redirect(base_url().'consignment');
 
             }else{
 
